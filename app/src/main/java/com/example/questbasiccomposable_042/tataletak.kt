@@ -14,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.dp
@@ -104,10 +105,19 @@ fun tataletakBoxColumnRow(modifier: Modifier) {
             modifier = modifier
                 .fillMaxWidth()
                 .height(height = 110.dp)
-                .background(color = Color.White),
+                .background(color = Color.Red),
             contentAlignment = Alignment.Center
         ) {
-
+            Column () {
+                Row (
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ){
+                    Text(text = "Col1_Row1_komponen1")
+                    Text(text = "Col1_Row1_komponen2")
+                    Text(text = "Col1_Row1_komponen3")
+                }
+            }
         }
     }
 }
